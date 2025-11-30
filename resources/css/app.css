@@ -9,3 +9,35 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: oklch(92.2% 0 0);
+    padding: 55px 20px;
+}
+.detail-label {
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    height: 30px;
+    background-color: oklch(68.5% 0.169 237.323);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    transition: all 0.03s ease;
+}
+
+.btn:hover {
+    background-color: oklch(71.5% 0.143 215.221);
+}
+
+.btn:active {
+    background-color: oklch(60.9% 0.126 221.723);
+}

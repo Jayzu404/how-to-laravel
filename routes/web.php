@@ -27,15 +27,21 @@ Route::get('/signup', function () {
     return view('auth_pages.sign_up');
 });
 
-Route::get('/customers', function () {
-    $customers = [
-        ["id" => 1, "name" => "Joe Smith", "email" => "joe@gmail.com"],
-        ["id" => 2, "name" => "Chris P. Pata", "email" => "chris@gmail.com"]
+Route::get('/players', function () {
+    $players = [
+        ["id" => 304674585, "ign" => "Player1"],
+        ["id" => 284695734, "ign" => "Chris P. Pata"]
     ];
 
-    return view('customers.index', ["customers" => $customers]);
+    return view('players.index', ["players" => $players]);
 });
 
-Route::get('/customers/{id}', function ($id) {
-    return view('customers.customer_details', ["id" => $id]);
+Route::get('/player/{id}', function ($id) {
+    $players = [
+        ["id" => 304674585, "ign" => "Player1", "current_rank" => "Mythical Honor", "highest_rank" => "Mythical Immortal"],
+        ["id" => 284695734, "ign" => "Chris P. Pata", "current_rank" => "Mythical Honor", "highest_rank" => "Mythical Immortal"]
+    ];
+
+    $player = findArrayByKey($players, $id);
+    return view('players.player_details', ["player" => $player]);
 });
